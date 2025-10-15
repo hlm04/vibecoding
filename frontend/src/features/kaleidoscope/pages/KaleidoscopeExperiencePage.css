@@ -1,0 +1,281 @@
+.kaleidoscope-page {
+  min-height: 100vh;
+  padding: clamp(2rem, 4vw, 4rem);
+  background: radial-gradient(circle at top left, #1f1c2c, #0f0c29 65%);
+  color: #f5f7ff;
+  display: grid;
+  gap: clamp(2rem, 3vw, 3rem);
+  justify-items: center;
+  text-align: center;
+}
+
+.kaleidoscope-page__header {
+  max-width: 720px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.kaleidoscope-page__tag {
+  align-self: center;
+  background: linear-gradient(120deg, rgba(255, 107, 107, 0.2), rgba(78, 205, 196, 0.3));
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kaleidoscope-page__title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.kaleidoscope-page__subtitle {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.375rem);
+  color: rgba(245, 247, 255, 0.7);
+}
+
+.kaleidoscope-page__visual {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+}
+
+.kaleidoscope-page__lab {
+  width: min(100%, 960px);
+  display: grid;
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.kaleidoscope-page__lab-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  transition: transform 0.4s ease;
+  border-radius: 36px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: linear-gradient(135deg, rgba(47, 54, 95, 0.5), rgba(14, 20, 51, 0.85));
+}
+
+.kaleidoscope-page__lab-stage:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px rgba(7, 10, 26, 0.4);
+}
+
+.kaleidoscope-page__lab-overlay {
+  position: absolute;
+  bottom: clamp(1.2rem, 2vw, 1.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 12, 28, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: rgba(245, 247, 255, 0.82);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.kaleidoscope-page__lab-stage:focus-within .kaleidoscope-page__lab-overlay,
+.kaleidoscope-page__lab-stage:hover .kaleidoscope-page__lab-overlay {
+  opacity: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.kaleidoscope-page__highlights {
+  width: min(100%, 880px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kaleidoscope-page__highlights h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.kaleidoscope-page__highlights ul {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.kaleidoscope-page__highlights li {
+  background: rgba(16, 21, 41, 0.4);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kaleidoscope-page__highlights h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.kaleidoscope-page__highlights p {
+  margin: 0;
+  color: rgba(245, 247, 255, 0.8);
+  line-height: 1.5;
+}
+
+.kaleidoscope-page__footer {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+}
+
+.kaleidoscope-page__cta {
+  background: linear-gradient(135deg, #ff6b6b, #5f27cd);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 12px 24px rgba(95, 39, 205, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kaleidoscope-page__cta:hover,
+.kaleidoscope-page__cta:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(95, 39, 205, 0.45);
+}
+
+.kaleidoscope-page__cta:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+.kaleidoscope-page__hint {
+  margin: 0;
+  color: rgba(245, 247, 255, 0.6);
+}
+
+.kaleidoscope-page__roadmap {
+  width: min(100%, 880px);
+  display: grid;
+  gap: 1.5rem;
+  background: rgba(11, 16, 38, 0.6);
+  border-radius: 24px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kaleidoscope-page__roadmap h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.kaleidoscope-page__roadmap ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.kaleidoscope-page__roadmap li {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.kaleidoscope-page__roadmap li header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  gap: 0.75rem;
+}
+
+.kaleidoscope-page__roadmap li span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(245, 247, 255, 0.6);
+}
+
+.kaleidoscope-page__roadmap li strong {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.kaleidoscope-page__roadmap li p {
+  margin: 0;
+  color: rgba(245, 247, 255, 0.78);
+  line-height: 1.5;
+}
+
+@media (min-width: 960px) {
+  .kaleidoscope-page {
+    text-align: left;
+    justify-items: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "header header"
+      "visual highlights"
+      "roadmap roadmap"
+      "footer footer";
+  }
+
+  .kaleidoscope-page__header {
+    grid-area: header;
+    justify-self: center;
+  }
+
+  .kaleidoscope-page__visual {
+    grid-area: visual;
+    align-content: center;
+  }
+
+  .kaleidoscope-page__highlights {
+    grid-area: highlights;
+  }
+
+  .kaleidoscope-page__roadmap {
+    grid-area: roadmap;
+  }
+
+  .kaleidoscope-page__footer {
+    grid-area: footer;
+  }
+}
+
+@media (max-width: 960px) {
+  .kaleidoscope-page__lab-stage {
+    padding: clamp(0.75rem, 4vw, 1.25rem);
+  }
+}
+
+@media (min-width: 720px) {
+  .kaleidoscope-page__lab {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
