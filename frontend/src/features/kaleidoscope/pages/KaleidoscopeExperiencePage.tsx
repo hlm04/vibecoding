@@ -1,7 +1,9 @@
 import type { FC } from "react";
 import KaleidoscopeCanvas from "../components/KaleidoscopeCanvas";
 import KaleidoscopeControlPanel from "../components/KaleidoscopeControlPanel";
+import KaleidoscopeOperationalDashboard from "../components/KaleidoscopeOperationalDashboard";
 import { useKaleidoscopeControls } from "../hooks/useKaleidoscopeControls";
+import { useOperationalInsights } from "../hooks/useOperationalInsights";
 
 import "./KaleidoscopeExperiencePage.css";
 
@@ -50,6 +52,7 @@ export const KaleidoscopeExperiencePage: FC = () => {
     interactionProps,
     reset,
   } = useKaleidoscopeControls();
+  const insights = useOperationalInsights();
 
   return (
     <main className="kaleidoscope-page">
@@ -93,6 +96,8 @@ export const KaleidoscopeExperiencePage: FC = () => {
           ))}
         </ul>
       </section>
+
+      <KaleidoscopeOperationalDashboard {...insights} />
 
       <section className="kaleidoscope-page__roadmap" aria-labelledby="kaleidoscope-roadmap">
         <h2 id="kaleidoscope-roadmap">后续冲刺路线</h2>

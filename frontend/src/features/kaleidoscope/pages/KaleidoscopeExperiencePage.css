@@ -240,6 +240,7 @@
     grid-template-areas:
       "header header"
       "visual highlights"
+      "operations operations"
       "roadmap roadmap"
       "footer footer";
   }
@@ -256,6 +257,11 @@
 
   .kaleidoscope-page__highlights {
     grid-area: highlights;
+  }
+
+  .kaleidoscope-page .kaleidoscope-operations {
+    grid-area: operations;
+    justify-self: center;
   }
 
   .kaleidoscope-page__roadmap {
