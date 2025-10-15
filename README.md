@@ -1,12 +1,31 @@
-# Vibecoding 仪式感时间套件
+# vibecoding
 
-「美学统一」方案，围绕 7、8、9 月的连续触达，采用「挑 21 的万花筒」视觉语言，构建充满仪式感的时间体验；并给出可执行的项目开发方法论，保证策略落地。
+## 开发快速开始
 
-## 内容结构
-- `docs/ritual-time-kit.md`：详细的视觉语言系统、三阶段触达策略、项目开发方法论、周度冲刺节奏与风险管控清单。
+### 环境依赖
+- [Node.js](https://nodejs.org/) >= 18
+- npm >= 9
 
-## 使用方式
-1. 阅读 `docs/ritual-time-kit.md` 获取整体美学策略与阶段安排。
-2. 依据项目节奏表拆解每月交付，确保 kaleidoscope 视觉母题在所有触点中保持一致。
-3. 按照文档中的四阶段开发方法论，明确各团队职责与里程碑，确保策略落地。
-4. 在执行过程中完善素材库与复盘记录，为下一轮仪式体验迭代打基础。
+### 启动与构建
+1. 安装依赖：`cd frontend && npm install`
+2. 启动开发服务器：`npm run start`
+3. 构建生产包：`npm run build`
+4. 代码检查：`npm run lint`
+
+### 代码结构
+```
+frontend/
+├── index.html
+├── package.json
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── features/
+│       └── kaleidoscope/
+│           ├── components/
+│           ├── hooks/
+│           └── pages/
+└── ...
+```
+
+上述目录预留了 Kaleidoscope 相关的组件、页面与业务逻辑，方便后续的 H5/WebGL 体验迭代。

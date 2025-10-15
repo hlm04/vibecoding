@@ -1,0 +1,81 @@
+.kaleidoscope-controls {
+  background: rgba(11, 14, 34, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  display: grid;
+  gap: 1rem;
+  color: rgba(245, 247, 255, 0.9);
+  box-shadow: 0 18px 32px rgba(8, 8, 16, 0.35);
+}
+
+.kaleidoscope-controls__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kaleidoscope-controls__header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.kaleidoscope-controls__reset {
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.kaleidoscope-controls__reset:hover,
+.kaleidoscope-controls__reset:focus-visible {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.kaleidoscope-controls__grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  margin: 0;
+}
+
+.kaleidoscope-controls__grid div {
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.kaleidoscope-controls__grid dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.25rem;
+  color: rgba(245, 247, 255, 0.65);
+}
+
+.kaleidoscope-controls__grid dd {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.kaleidoscope-controls__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(245, 247, 255, 0.6);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .kaleidoscope-controls {
+    padding: 1rem 1.1rem;
+  }
+}

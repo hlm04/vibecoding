@@ -1,0 +1,19 @@
+.kaleidoscope-canvas {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 32px 72px rgba(16, 21, 41, 0.32);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(40, 40, 60, 0.65),
+    rgba(8, 8, 16, 0.9)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: crosshair;
+}
+
+.kaleidoscope-canvas:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 4px;
+}
